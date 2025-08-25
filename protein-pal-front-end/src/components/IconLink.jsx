@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "../assets/logo.png"; 
+import proteinpal from "../assets/proteinpal.png"; 
 
 const IconLink = () => {
   return (
-  <img src={logo}
+  <img src={proteinpal}
   alt="logo"
   className="h-full cursor-pointer" />
   )

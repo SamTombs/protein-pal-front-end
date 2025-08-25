@@ -14,42 +14,32 @@ const NavBar = () => {
 
   return (
     <nav
-      className="flex justify-between items-center px-4"
+      className="flex justify-between bg-white text-black items-center px-4"
       style={{ height: "60px" }}
     >
-      <Link to="/" className="h-full">
+      <Link to="/" className="h-6 w-50">
         <IconLink />
       </Link>
       {user ? (
         <ul className="flex flex-row gap-6">
-          <li>Welcome, {user.username}</li>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
+          <li className="text-white bg-gradient-to-r from-black via-black to-black hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black shadow-lg shadow-black dark:shadow-lg dark:shadow-blackfont-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
             <Link to="/about">About</Link>
           </li>
-          <li>
-            <Link to="/lists">Shopping Lists</Link>
+          <li className="text-white bg-gradient-to-r from-black via-black to-black hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black shadow-lg shadow-black dark:shadow-lg dark:shadow-blackfont-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+            <Link to="/lists">Lists</Link>
           </li>
-          <li>
-            <Link to="/hoots/new">New List</Link>
-          </li>
-          <li>
+          <li className="text-white bg-gradient-to-r from-black via-black to-black hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black shadow-lg shadow-black dark:shadow-lg dark:shadow-blackfont-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
             <Link to="/" onClick={handleSignOut}>
               Sign Out
             </Link>
           </li>
         </ul>
       ) : (
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
+        <ul className="flex flex-row gap-6">
+          <li className="text-white bg-gradient-to-r from-black via-black to-black hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black shadow-lg shadow-black dark:shadow-lg dark:shadow-blackfont-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
             <Link to="/sign-in">Sign In</Link>
           </li>
-          <li>
+          <li className="text-white bg-gradient-to-r from-black via-black to-black hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-black dark:focus:ring-black shadow-lg shadow-black dark:shadow-lg dark:shadow-blackfont-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
             <Link to="/sign-up">Sign Up</Link>
           </li>
         </ul>
