@@ -1,8 +1,12 @@
+import logo from "../assets/logo.png"
+
 const Footer = () => {
   return (
     <>
       <div className="flex justify-end bg-white items-center px-4">
-        <h1 className="flex justify-between text-black items-center px-4" style={{ height: "60px" }}>This is the footer</h1>
+          <img src={logo}
+          alt="logo"
+          className="h-20" />
       </div>
     </>
   );
