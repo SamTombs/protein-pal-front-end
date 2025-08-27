@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import * as userService from "../services/userService";
 import logo from "../assets/proteinpal.png";
+import dashboardMain from "../assets/dashboardMain.png";
 
 const Dashboard = () => {
   const { user } = useContext(UserContext);
@@ -20,12 +21,14 @@ const Dashboard = () => {
   }, [user]);
 
   return (
-    <main className=" flex flex-row h-130 items-center justify-center bg-neutral-200">
+    <main
+      className="flex flex-row h-150 items-center justify-center"
+      style={{ backgroundColor: "#f5f2eb" }}
+    >
       <section>
         <div>
-          <img className="h-20" src={logo} alt="Main Logo" />
+          <img className="h-110 w-190" src={dashboardMain} alt="Main Photo" />
         </div>
-        <p className="font-inter">SHOPPING FOR PROTEIN MADE SIMPLE</p>
       </section>
     </main>
   );

@@ -1,9 +1,13 @@
-const ShoppingPage = () => {
-    return (
-        <>
-            <h1>Shopping Page</h1>
-        </>
-    )
-}
+import ItemList from "../components/ItemList";
+import ShoppingCart from "../components/ShoppingCart";
 
-export default ShoppingPage
+const ShoppingPage = () => {
+  return (
+    <>
+      <ItemList />
+      <ShoppingCart />
+    </>
+  );
+};
+
+export default ShoppingPage;
