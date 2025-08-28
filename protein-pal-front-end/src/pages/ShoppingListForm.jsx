@@ -20,7 +20,7 @@ const ShoppingListForm = ({ handleAddList }) => {
     navigate("/lists");
   };
   return (
-    <div>
+    <div style={{ backgroundColor: "#f5f2eb" }}>
       <form
         onSubmit={handleAddSubmit}
         className="bg-white shadow-md rounded px-30 pt-6 pb-5 mb-2"

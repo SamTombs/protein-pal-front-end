@@ -38,7 +38,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <main>
+    <main style={{ backgroundColor: "#f5f2eb" }}>
       <section className="bg-neutral-200">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-black rounded-lg md:mt-0 sm:max-w-md xl:p-0">
@@ -117,44 +117,5 @@ const SignUpForm = () => {
   );
 };
 
-// <form onSubmit={handleSubmit}>
-//   <div>
-//     <label htmlFor='username'>Username:</label>
-//     <input
-//       type='text'
-//       id='name'
-//       value={username}
-//       name='username'
-//       onChange={handleChange}
-//       required
-//     />
-//   </div>
-//   <div>
-//     <label htmlFor='password'>Password:</label>
-//     <input
-//       type='password'
-//       id='password'
-//       value={password}
-//       name='password'
-//       onChange={handleChange}
-//       required
-//     />
-//   </div>
-//   <div>
-//     <label htmlFor='confirm'>Confirm Password:</label>
-//     <input
-//       type='password'
-//       id='confirm'
-//       value={passwordConf}
-//       name='passwordConf'
-//       onChange={handleChange}
-//       required
-//     />
-//   </div>
-//   <div>
-//     <button disabled={isFormInvalid()}>Sign Up</button>
-//     <button onClick={() => navigate('/')}>Cancel</button>
-//   </div>
-// </form>
 
 export default SignUpForm;

@@ -1,13 +1,22 @@
-const ShoppingCart = () => {
+const ShoppingCart = ({ cart, removeFromCart }) => {
   return (
     <div>
-      <h1>
-        Shopping Cart will be a map function iterating over the list of cart
-        items. such as cart.map
-      </h1>
-      <p>There will also be a remove function</p>
+      <h2>Shopping Cart</h2>
+      <ul>
+        {cart.map((item, index) => (
+          <li key={index}>
+            {item.name}
+            <button
+              onClick={() => removeFromCart(index)}
+            >
+              Remove
+            </button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
+
 
 export default ShoppingCart;

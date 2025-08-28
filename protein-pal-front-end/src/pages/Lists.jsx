@@ -8,7 +8,7 @@ const Lists = ({ lists }) => {
   };
 
   return (
-    <main>
+    <main style={{ backgroundColor: "#f5f2eb" }}>
       {lists.map((list) => (
         <Link key={list._id} to={`/lists/${list._id}`}>
           <article>

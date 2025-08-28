@@ -14,6 +14,7 @@ import { UserContext } from "./contexts/UserContext";
 const App = () => {
   const { user } = useContext(UserContext);
   const [lists, setLists] = useState([]);
+
   useEffect(() => {
     const fetchLists = async () => {
       try {

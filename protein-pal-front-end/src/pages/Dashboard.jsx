@@ -3,6 +3,7 @@ import { UserContext } from "../contexts/UserContext";
 import * as userService from "../services/userService";
 import logo from "../assets/proteinpal.png";
 import dashboardMain from "../assets/dashboardMain.png";
+import HomeVideo from "../components/HomeVideo";
 
 const Dashboard = () => {
   const { user } = useContext(UserContext);
@@ -22,12 +23,23 @@ const Dashboard = () => {
 
   return (
     <main
-      className="flex flex-row h-150 items-center justify-center"
+      className="flex flex-col items-center"
       style={{ backgroundColor: "#f5f2eb" }}
     >
-      <section>
+      <section className="w-7xl">
         <div>
-          <img className="h-110 w-190" src={dashboardMain} alt="Main Photo" />
+          <img className="w-7xl" src={dashboardMain} alt="Main Photo" />
+        </div>
+      </section>
+      <section className="w-7xl flex justify-center items-center p-8 gap-8">
+        <div className="flex-1">
+          <HomeVideo />
+        </div>
+        <div className="flex-1">
+          <h1 className="text-3xl font-bold">A NEW HORIZON FOR A PROTEIN FOCUSED DIET</h1>
+          <p>
+            Protein focused, unrelenting
+          </p>
         </div>
       </section>
     </main>
