@@ -25,17 +25,6 @@ const create = async (formData) => {
   }
 };
 
-const update = async (formData, listId) => {
-  try {
-    const res = await axios.put(`${BASE_URL}/${listId}`, formData, {
-      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-    });
-    return res.data;
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 const deleteList = async (listId) => {
   try {
     const res = await axios.delete(`${BASE_URL}/${listId}`, {
@@ -47,4 +36,4 @@ const deleteList = async (listId) => {
   }
 };
 
-export { index, create, update, deleteList };
+export { index, create, deleteList };

@@ -26,7 +26,7 @@ const Dashboard = () => {
       className="flex flex-col items-center"
       style={{ backgroundColor: "#f5f2eb" }}
     >
-      <section className="w-7xl">
+      <section className="w-7xl pt-50 pb-95">
         <div>
           <img className="w-7xl" src={dashboardMain} alt="Main Photo" />
         </div>

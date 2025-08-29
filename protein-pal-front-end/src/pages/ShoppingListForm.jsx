@@ -38,10 +38,10 @@ const ShoppingListForm = ({ handleAddList }) => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="bg-blue-100 appearance-none border-2 border-blue-200 rounded w-full py-2 px-4 text-gray-700  focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-stone-200 appearance-none border-2 border-stone-300 rounded w-full py-2 px-4 text-gray-700  focus:outline-none focus:bg-white focus:border-teal-900"
           />
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 ml-5 rounded focus:outline-none focus:shadow-outline"
+            className="bg-amber-900 cursor-pointer hover:bg-amber-700 text-white font-bold py-2 px-5 ml-5 rounded focus:outline-none focus:shadow-outline"
             type="submit"
           >
             Add

@@ -5,9 +5,9 @@ import SignUpForm from "./pages/SignUpForm";
 import SignInForm from "./pages/SignInForm";
 import AppLayout from "./layout/AppLayout";
 import Lists from "./pages/Lists";
-import About from "./pages/About"
+import About from "./pages/About";
 import ShoppingListForm from "./pages/ShoppingListForm";
-import ShoppingPage from "./pages/ShoppingPage"
+import ShoppingPage from "./pages/ShoppingPage";
 import * as listService from "./services/listService";
 import { UserContext } from "./contexts/UserContext";
 
@@ -20,7 +20,7 @@ const App = () => {
       try {
         const fetchedLists = await listService.index();
         setLists(fetchedLists.data);
-        console.log(fetchedLists)
+        console.log(fetchedLists);
       } catch (error) {
         console.log(error);
       }
@@ -40,13 +40,27 @@ const App = () => {
     }
   };
 
+  const handleDeleteList = async (listId) => {
+    try {
+      await listService.deleteList(listId);
+      setLists(lists.filter((list) => list._id !== listId));
+    } catch (error) {
+      console.error("FAILED TO DELETE LIST", error);
+    }
+  };
+
   return (
     <>
       <Routes>
         <Route element={<AppLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/about" element={<About />} />
-          <Route path="/lists" element={<Lists lists={lists} />} />
+          <Route
+            path="/lists"
+            element={
+              <Lists lists={lists} handleDeleteList={handleDeleteList} />
+            }
+          />
           <Route
             path="/lists/new"
             element={<ShoppingListForm handleAddList={handleAddList} />}
