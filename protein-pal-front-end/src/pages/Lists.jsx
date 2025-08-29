@@ -10,7 +10,7 @@ const Lists = ({ lists, handleDeleteList }) => {
 
   return (
     <main className="bg-[#f5f2eb] min-h-screen p-6">
-      <div className="space-y-4">
+      <div className="space-y-4 pt-15">
         {lists.map((list) => (
           <div
             key={list._id}

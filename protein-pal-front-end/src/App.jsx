@@ -49,6 +49,17 @@ const App = () => {
     }
   };
 
+  const handleUpdateCart = async (listId, data) => {
+    console.log(listId)
+    console.log(data)
+    try {
+      const updatedCart =  await listService.updateCart(listId, data)
+      setLists(updatedCart)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
       <Routes>
@@ -65,7 +76,7 @@ const App = () => {
             path="/lists/new"
             element={<ShoppingListForm handleAddList={handleAddList} />}
           />
-          <Route path="/lists/:listId" element={<ShoppingPage />} />
+          <Route path="/lists/:listId" element={<ShoppingPage lists={lists} handleUpdateCart={handleUpdateCart} />} />
           <>
             <Route path="/sign-up" element={<SignUpForm />} />
             <Route path="/sign-in" element={<SignInForm />} />

@@ -1,16 +1,21 @@
 import ItemList from "../components/ItemList";
 import ShoppingCart from "../components/ShoppingCart";
 import { useState } from "react";
+import { useParams } from "react-router";
 
+// const cartFromLocalStorage = JSON.parse(localStorage.getItem("item") || "[]");
 
-const cartFromLocalStorage = JSON.parse(localStorage.getItem("item") || "[]");
-
-const ShoppingPage = () => {
-  const [cart, setCart] = useState(cartFromLocalStorage);
+const ShoppingPage = ({ handleUpdateCart, lists }) => {
+  console.log(lists)
+  const { listId } = useParams();
+  const filteredLists = lists? lists?.filter((list) => listId !== list._id ) : [] ;
+  const [cart, setCart] = useState(filteredLists);
   const [showModal, setShowModal] = useState(false);
 
   const addToCart = (item) => {
-    setCart((prevState) => [item, ...prevState]);
+    console.log(item);
+
+    handleUpdateCart(listId, item);
   };
 
   const removeFromCart = (cartItem) => {

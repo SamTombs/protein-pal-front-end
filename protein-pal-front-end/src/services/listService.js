@@ -25,6 +25,21 @@ const create = async (formData) => {
   }
 };
 
+const updateCart = async (listId, data) => {
+  try {
+    const res = await axios.patch(`${BASE_URL}/${listId}`, data, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    console.log(res);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+
+
+
 const deleteList = async (listId) => {
   try {
     const res = await axios.delete(`${BASE_URL}/${listId}`, {
@@ -36,4 +51,4 @@ const deleteList = async (listId) => {
   }
 };
 
-export { index, create, deleteList };
+export { index, create, deleteList, updateCart };

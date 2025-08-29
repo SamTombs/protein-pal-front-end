@@ -28,11 +28,6 @@ const ItemList = ({ addToCart }) => {
             alt="Inspiration"
             className="w-1/5 h-auto object-contain rounded-xl"
           />
-          <img
-            src={InspirationPhoto}
-            alt="Inspiration"
-            className="w-1/5 h-auto object-contain rounded-xl"
-          />
         </section>
 
         <div className="flex flex-wrap gap-4 justify-center mt-10">

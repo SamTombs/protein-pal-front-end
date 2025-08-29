@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
 const ShoppingCart = ({ cart, removeFromCart }) => {
-  useEffect(() => {
-    localStorage.setItem("item", JSON.stringify(cart));
-  }, [cart]);
+  // useEffect(() => {
+  //   localStorage.setItem("item", JSON.stringify(cart));
+  // }, [cart]);
 
   return (
     <div tyle={{ backgroundColor: "#e2dac6ff" }}>
