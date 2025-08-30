@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { fetchItems } from "../services/itemService";
 import Inspiration from "../assets/Inspiration.png";
-import InspirationPhoto from "../assets/InspirationPhoto.jpg";
+
 
 const ItemList = ({ addToCart }) => {
   const [items, setItems] = useState([]);
@@ -21,7 +21,7 @@ const ItemList = ({ addToCart }) => {
 
   return (
     <>
-      <div tyle={{ backgroundColor: "#dcd2baff" }} className="justify-center pl-40 pr-40">
+      <div className="justify-center pl-40 pr-40">
         <section className="flex flex-row space-x-6 items-center">
           <img
             src={Inspiration}
@@ -49,10 +49,10 @@ const ItemList = ({ addToCart }) => {
                     {item.name}
                   </h5>
                 </div>
-                <p className="mb-1 text-sm font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-1 text-sm font-normal text-gray-700">
                   Brand: {item.brand}
                 </p>
-                <p className="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400">
+                <p className="mb-3 text-sm font-normal text-gray-700">
                   Protein/100g: {item.protein}
                 </p>
               </div>

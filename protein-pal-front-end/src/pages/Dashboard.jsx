@@ -1,7 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import * as userService from "../services/userService";
-import logo from "../assets/proteinpal.png";
 import dashboardMain from "../assets/dashboardMain.png";
 import HomeVideo from "../components/HomeVideo";
 
@@ -23,8 +22,7 @@ const Dashboard = () => {
 
   return (
     <main
-      className="flex flex-col items-center"
-      style={{ backgroundColor: "#f5f2eb" }}
+      className="flex flex-col bg-[#f5f2eb] items-center"
     >
       <section className="w-7xl pt-50 pb-95">
         <div>

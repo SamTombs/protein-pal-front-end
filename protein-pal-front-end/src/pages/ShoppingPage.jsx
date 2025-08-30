@@ -28,7 +28,7 @@ const ShoppingPage = ({ handleUpdateCart, lists }) => {
 
   return (
     <>
-      <div style={{ backgroundColor: "#fdf7efff" }}>
+      <div className="bg-[#fdf7efff]">
         {!showModal ? (
           <button
             className="px-4 py-2 bg-amber-900 text-white text-xs font-bold uppercase rounded hover:bg-amber-700 focus:outline-none focus:bg-gray-700"

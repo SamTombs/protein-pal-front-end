@@ -6,8 +6,8 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
   // }, [cart]);
 
   return (
-    <div tyle={{ backgroundColor: "#e2dac6ff" }}>
-      <ul className=" flex flex-row flex-wrap gap-4 mt-20 mb-20">
+    <div className="bg-white">
+      <ul className=" flex flex-row flex-wrap gap-4 px-100 mb-20">
         {cart.map((item, index) => (
           <li
             key={index}

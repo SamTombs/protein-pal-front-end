@@ -37,9 +37,6 @@ const updateCart = async (listId, data) => {
   }
 };
 
-
-
-
 const deleteList = async (listId) => {
   try {
     const res = await axios.delete(`${BASE_URL}/${listId}`, {
