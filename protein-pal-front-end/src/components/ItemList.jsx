@@ -21,7 +21,7 @@ const ItemList = ({ addToCart }) => {
 
   return (
     <>
-      <div tyle={{ backgroundColor: "#dcd2baff" }} className="justify-center">
+      <div tyle={{ backgroundColor: "#dcd2baff" }} className="justify-center pl-40 pr-40">
         <section className="flex flex-row space-x-6 items-center">
           <img
             src={Inspiration}

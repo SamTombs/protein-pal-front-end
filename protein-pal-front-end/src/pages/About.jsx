@@ -9,7 +9,7 @@ const About = () => {
           style={{ backgroundColor: "#f5f2eb" }}
         >
           <p className="font-serif text-lg text-justify pr-40 pl-40">
-            About Us We didnt start out in the world of protein. In fact, our
+            We didn't start out in the world of protein. In fact, our
             story began on the other end of the spectrum—flour-dusted aprons,
             warm ovens, and a little neighborhood bakery that prided itself on
             serving the softest, most indulgent treats. It was a sweet life, but
@@ -18,8 +18,8 @@ const About = () => {
             dedication we had for creating delicious baked goods could be
             channeled into helping people, just like you, to find protein-packed
             options that fuel peoples lives in a healthier way. From those
-            humble, carby beginnings, weve risen into something new: a one-stop
-            destination to find high-quality proteins. Whether youre an
+            humble, carby beginnings, we've risen into something new: a one-stop
+            destination to find high-quality proteins. Whether you're an
             athlete, a busy professional, or just someone looking for better
             choices, we’e here to make shopping for protein simple, accessible,
             and actually enjoyable.

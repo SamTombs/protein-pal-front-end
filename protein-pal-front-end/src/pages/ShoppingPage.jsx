@@ -8,8 +8,8 @@ import { useParams } from "react-router";
 const ShoppingPage = ({ handleUpdateCart, lists }) => {
   console.log(lists)
   const { listId } = useParams();
-  const filteredLists = lists? lists?.filter((list) => listId !== list._id ) : [] ;
-  const [cart, setCart] = useState(filteredLists);
+  // const filteredLists = lists? lists?.filter((list) => listId !== list._id ) : [] ;
+  const [cart, setCart] = useState(lists?.filter((list) => listId !== list._id ));
   const [showModal, setShowModal] = useState(false);
 
   const addToCart = (item) => {

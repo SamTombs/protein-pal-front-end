@@ -6,7 +6,6 @@ import SignInForm from "./pages/SignInForm";
 import AppLayout from "./layout/AppLayout";
 import Lists from "./pages/Lists";
 import About from "./pages/About";
-import ShoppingListForm from "./pages/ShoppingListForm";
 import ShoppingPage from "./pages/ShoppingPage";
 import * as listService from "./services/listService";
 import { UserContext } from "./contexts/UserContext";
@@ -69,12 +68,8 @@ const App = () => {
           <Route
             path="/lists"
             element={
-              <Lists lists={lists} handleDeleteList={handleDeleteList} />
+              <Lists lists={lists} handleDeleteList={handleDeleteList} handleAddList={handleAddList}  />
             }
-          />
-          <Route
-            path="/lists/new"
-            element={<ShoppingListForm handleAddList={handleAddList} />}
           />
           <Route path="/lists/:listId" element={<ShoppingPage lists={lists} handleUpdateCart={handleUpdateCart} />} />
           <>

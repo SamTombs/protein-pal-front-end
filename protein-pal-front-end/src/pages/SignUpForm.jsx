@@ -38,19 +38,19 @@ const SignUpForm = () => {
   };
 
   return (
-    <main style={{ backgroundColor: "#f5f2eb" }}>
-      <section className="bg-neutral-200">
+    <main className="bg-[#f5f2eb]">
+      <section>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <div className="w-full bg-black rounded-lg md:mt-0 sm:max-w-md xl:p-0">
+          <div className="w-full bg-neutral-400 rounded-lg md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+              <h1 className="text-xl font-bold leading-tight tracking-tight text-black md:text-2xl ">
                 Sign up for an account
               </h1>
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div>
                   <label
                     htmlFor="username"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-black "
                   >
                     Username
                   </label>
@@ -58,7 +58,7 @@ const SignUpForm = () => {
                     type="text"
                     name="username"
                     id="name"
-                    className="bg-white border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    className="bg-white border border-gray-300 text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     onChange={handleChange}
                     required
                   />
@@ -66,7 +66,7 @@ const SignUpForm = () => {
                 <div>
                   <label
                     htmlFor="password"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-black "
                   >
                     Password
                   </label>
@@ -75,7 +75,7 @@ const SignUpForm = () => {
                     name="password"
                     id="password"
                     placeholder="••••••••"
-                    className="bg-white border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+                    className="bg-white border border-gray-300 text-black rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
                     onChange={handleChange}
                     required
                   />
@@ -83,7 +83,7 @@ const SignUpForm = () => {
                 <div>
                   <label
                     htmlFor="confirm"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-2 text-sm font-medium text-black"
                   >
                     Confirm Password
                   </label>

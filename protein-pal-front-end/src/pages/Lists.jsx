@@ -1,12 +1,19 @@
 import { useNavigate, Link, useParams } from "react-router";
+import ShoppingListForm from "../components/ShoppingListForm";
+import { useState } from "react"
 
-const Lists = ({ lists, handleDeleteList }) => {
+const Lists = ({ lists, handleDeleteList, handleAddList }) => {
   const navigate = useNavigate();
   const { listId } = useParams()
+   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const navToPage = (url) => {
     navigate(url);
   };
+
+  const handleFormView = () => {
+    setIsFormOpen(!isFormOpen)
+  }
 
   return (
     <main className="bg-[#f5f2eb] min-h-screen p-6">
@@ -36,12 +43,15 @@ const Lists = ({ lists, handleDeleteList }) => {
       <div className="mt-6 flex justify-center">
         <button
           className="flex items-center justify-center w-12 h-12 cursor-pointer rounded-full bg-amber-900 text-white text-2xl hover:bg-amber-700 transition shadow-md"
-          onClick={() => navToPage("/lists/new")}
+          onClick={() => handleFormView()}
         >
-          +
+          {isFormOpen ? "-" : "+"}
         </button>
       </div>
-    </main>
+      {isFormOpen ? 
+      <ShoppingListForm handleAddList={handleAddList} isFormOpen={isFormOpen} />
+      : ""}   
+    </main>   
   );
 };
 
