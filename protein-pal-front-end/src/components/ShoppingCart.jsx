@@ -1,9 +1,5 @@
-import { useEffect } from "react";
 
 const ShoppingCart = ({ cart, removeFromCart }) => {
-  // useEffect(() => {
-  //   localStorage.setItem("item", JSON.stringify(cart));
-  // }, [cart]);
 
   return (
     <div className="bg-white">

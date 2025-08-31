@@ -48,12 +48,13 @@ const App = () => {
     }
   };
 
-  const handleUpdateCart = async (listId, data) => {
+ const handleUpdateCart = async (listId, data) => {
     console.log(listId)
     console.log(data)
     try {
-      const updatedCart =  await listService.updateCart(listId, data)
-      setLists(updatedCart)
+      const updatedCart = await listService.updateCart(listId, data)
+      setLists(lists.map((list) => (list._id === updatedCart._id ? updatedCart : list))
+      );
     } catch (error) {
       console.log(error)
     }

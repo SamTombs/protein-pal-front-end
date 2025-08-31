@@ -1,15 +1,21 @@
 import ItemList from "../components/ItemList";
 import ShoppingCart from "../components/ShoppingCart";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-// const cartFromLocalStorage = JSON.parse(localStorage.getItem("item") || "[]");
-
 const ShoppingPage = ({ handleUpdateCart, lists }) => {
-  console.log(lists)
+
   const { listId } = useParams();
-  // const filteredLists = lists? lists?.filter((list) => listId !== list._id ) : [] ;
-  const [cart, setCart] = useState(lists?.filter((list) => listId !== list._id ));
+  const filteredLists = lists?.filter((list) => listId === list._id)
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    if (filteredLists && filteredLists[0]) {
+      setCart(filteredLists[0].items);
+    }
+  }, [filteredLists]); 
+  
+  
   const [showModal, setShowModal] = useState(false);
 
   const addToCart = (item) => {
