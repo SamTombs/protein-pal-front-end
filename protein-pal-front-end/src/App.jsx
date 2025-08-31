@@ -48,17 +48,29 @@ const App = () => {
     }
   };
 
- const handleUpdateCart = async (listId, data) => {
-    console.log(listId)
-    console.log(data)
+  const handleUpdateCart = async (listId, data) => {
+    console.log(listId);
+    console.log(data);
     try {
-      const updatedCart = await listService.updateCart(listId, data)
-      setLists(lists.map((list) => (list._id === updatedCart._id ? updatedCart : list))
+      const updatedCart = await listService.updateCart(listId, data);
+      setLists(
+        lists.map((list) => (list._id === updatedCart._id ? updatedCart : list))
       );
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  }
+  };
+
+  const handleRemoveItem = async (listId, data) => {
+    try {
+      const removedItem = await listService.removeItem(listId, data);
+      setLists(
+        lists.map((list) => (list._id === removedItem._id ? removedItem : list))
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <>
@@ -69,10 +81,19 @@ const App = () => {
           <Route
             path="/lists"
             element={
-              <Lists lists={lists} handleDeleteList={handleDeleteList} handleAddList={handleAddList}  />
+              <Lists
+                lists={lists}
+                handleDeleteList={handleDeleteList}
+                handleAddList={handleAddList}
+              />
             }
           />
-          <Route path="/lists/:listId" element={<ShoppingPage lists={lists} handleUpdateCart={handleUpdateCart} />} />
+          <Route
+            path="/lists/:listId"
+            element={
+              <ShoppingPage lists={lists} handleUpdateCart={handleUpdateCart} handleRemoveItem={handleRemoveItem} />
+            }
+          />
           <>
             <Route path="/sign-up" element={<SignUpForm />} />
             <Route path="/sign-in" element={<SignInForm />} />

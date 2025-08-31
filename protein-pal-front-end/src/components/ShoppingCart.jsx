@@ -32,7 +32,7 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
             <div className="p-5 pt-0">
               <button
                 className="w-full inline-flex items-center justify-center px-3 py-2 text-sm font-medium text-center text-white bg-red-900 rounded-lg hover:bg-red-700"
-                onClick={() => removeFromCart(index)}
+                onClick={() => removeFromCart(item)}
               >
                 Remove
               </button>

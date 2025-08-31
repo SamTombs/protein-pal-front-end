@@ -3,29 +3,30 @@ import ShoppingCart from "../components/ShoppingCart";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-const ShoppingPage = ({ handleUpdateCart, lists }) => {
-
+const ShoppingPage = ({ handleUpdateCart, handleRemoveItem, lists }) => {
   const { listId } = useParams();
-  const filteredLists = lists?.filter((list) => listId === list._id)
+  const filteredLists = lists?.filter((list) => listId === list._id);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     if (filteredLists && filteredLists[0]) {
       setCart(filteredLists[0].items);
     }
-  }, [filteredLists]); 
-  
-  
+  }, [filteredLists]);
+
   const [showModal, setShowModal] = useState(false);
 
   const addToCart = (item) => {
-    console.log(item);
-
-    handleUpdateCart(listId, item);
+    handleUpdateCart(listId, {
+      name: item.name,
+      brand: item.brand,
+      protein: item.protein,
+      image: item.image, 
+    });
   };
 
-  const removeFromCart = (cartItem) => {
-    setCart((prevStack) => prevStack.filter((_, index) => index !== cartItem));
+  const removeFromCart = (item) => {
+    handleRemoveItem(listId, item);
   };
 
   const toggle = () => {

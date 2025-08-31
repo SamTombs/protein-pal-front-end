@@ -37,6 +37,19 @@ const updateCart = async (listId, data) => {
   }
 };
 
+const removeItem = async (listId, data) => {
+  console.log(data)
+  try {
+    const res = await axios.patch(`${BASE_URL}/${listId}/removeItem`, data, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    console.log(res);
+    return res.data;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const deleteList = async (listId) => {
   try {
     const res = await axios.delete(`${BASE_URL}/${listId}`, {
@@ -48,4 +61,4 @@ const deleteList = async (listId) => {
   }
 };
 
-export { index, create, deleteList, updateCart };
+export { index, create, deleteList, updateCart, removeItem };
