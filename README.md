@@ -15,9 +15,9 @@ It took me years of crash dieting and working in a high calorie deficit to reali
 It is very difficult to find out foods with a high amount of protein. I wanted a simple resource where you can get some inspiration, slam it down onto a shopping list and head to the shops. 
 
 
-View Site (
+View Site https://github.com/SamTombs/protein-pal-front-end
 
-Trello (https://trello.com/b/K4LelqKs/project-3-protein-pal)
+Trello https://trello.com/b/K4LelqKs/project-3-protein-pal
 
 ## Features
 
@@ -58,6 +58,17 @@ Trello (https://trello.com/b/K4LelqKs/project-3-protein-pal)
 ## Rough Drafts
 
 <img src="https://github.com/user-attachments/assets/1aec4788-cd9e-421c-9532-1842daa76bab" alt="landing" width="350" /> <img width="350" alt="shopping-page" src="https://github.com/user-attachments/assets/6a574a78-72d0-457a-a39c-02cbfbc4e875" /> <img width="350"  alt="Lists" src="https://github.com/user-attachments/assets/98a23341-02a3-460b-847e-320745a4da0e" />
+
+## Wire Frames
+
+<img width="200" height="650" alt="React " src="https://github.com/user-attachments/assets/5c0f32ae-651f-4c02-9d85-fe49e179bc57" />
+
+For my react set up, I wanted to split the pages and the other components. For ease of use in this project as it is small scale, I removed extra folders, so I could easily spot my jsx files.
+
+<img width="242" height="517" alt="Express" src="https://github.com/user-attachments/assets/99d64bb7-182d-4163-b883-0081fb1e0205" />
+
+The two main controllers are : (1) Items; where I pull from the api using axios.get (2) Lists, where I have CRUD functionality for the users lists.
+
 
 ## 3rd Party Api
 
