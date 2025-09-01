@@ -38,7 +38,7 @@ const SignUpForm = () => {
   };
 
   return (
-    <main className="bg-[#f5f2eb]">
+    <main className="bg-[#fbfaf7e0]">
       <section>
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-neutral-400 rounded-lg md:mt-0 sm:max-w-md xl:p-0">

@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import { UserContext } from "../contexts/UserContext";
 import * as userService from "../services/userService";
-import dashboardMain from "../assets/dashboardMain.png";
+import LandingMain from "../assets/LandingMain.png";
 import HomeVideo from "../components/HomeVideo";
 
 const Dashboard = () => {
@@ -21,10 +21,10 @@ const Dashboard = () => {
   }, [user]);
 
   return (
-    <main className="flex flex-col bg-[#f5f2eb] items-center">
+    <main className="flex flex-col bg-[#fbfaf7e0] items-center">
       <section className="w-7xl pt-50 pb-95">
         <div>
-          <img className="w-7xl" src={dashboardMain} alt="Main Photo" />
+          <img className="w-7xl" src={LandingMain} alt="Main Photo" />
           <h6 className="text-center pt-20 italic">See More</h6>
         </div>
       </section>

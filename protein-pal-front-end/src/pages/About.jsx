@@ -5,7 +5,7 @@ const About = () => {
     <>
       <div>
         <div
-          className="flex justify-end bg-[#f5f2eb] items-center pt-30 pr-90 pb-80 px-4"
+          className="flex justify-end bg-[#fbfaf7e0] items-center pt-30 pr-90 pb-80 px-4"
           
         >
           <p className="font-serif text-lg text-justify pr-40 pl-40">

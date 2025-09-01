@@ -16,7 +16,7 @@ const Lists = ({ lists, handleDeleteList, handleAddList }) => {
   }
 
   return (
-    <main className="bg-[#f5f2eb] min-h-screen p-6">
+    <main className="bg-[#fbfaf7e0] min-h-screen p-6">
       <div className="space-y-4 pt-15">
         {lists.map((list) => (
           <div

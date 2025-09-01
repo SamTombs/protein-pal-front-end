@@ -14,7 +14,7 @@ const NavBar = () => {
 
   return (
     <nav
-      className="flex justify-between h-20 bg-[#f5f2eb] items-center px-4"
+      className="flex justify-between h-20 bg-[#fbfaf7e0] items-center px-4"
     >
       <Link to="/" className="h-6 w-50">
         <img src={proteinpal} alt="logo" className="h-full cursor-pointer" />
