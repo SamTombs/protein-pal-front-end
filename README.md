@@ -1,6 +1,7 @@
 Project 3 - React / Express
 
-<img width="600" alt="Screenshot 2025-07-07 at 08 50 17" src="https://github.com/SamTombs/protein-pal-front-end/blob/main/protein-pal-front-end/src/assets/dashboardMain.png" />
+<img width="600" alt="LandingMain" src="https://github.com/user-attachments/assets/2fda5d19-b79e-4113-b3ae-2b2cd78bf271" />
+
 
 # ProteinPal
 
@@ -84,6 +85,7 @@ Now I just focused on showing the functionality and that it can be done. I sorte
 - I would like to find a different database. The images arent up to standard. I would like to find a database of foods with professional images attached.
 - Cart to have mobile functionality for on the go, whilst in a supermarket.
 - CSS: Introduce more font styles, button improvements and mobile responsiveness
+- Dark Mode
 
 
 ## Stretch Goals
@@ -91,6 +93,7 @@ Now I just focused on showing the functionality and that it can be done. I sorte
 - [ ] Implement user data, track the users personalised protein goal.
 - [ ] Analytics on the user page, how many times a product has been put in shopping cart, etc.
 - [ ] Search function, when the database size is increased.
+
 
 
 
