@@ -14,6 +14,7 @@ const Lists = ({ lists, handleDeleteList, handleAddList }) => {
   const handleFormView = () => {
     setIsFormOpen(!isFormOpen)
   }
+  console.log(lists)
 
   return (
     <main className="bg-[#fbfaf7e0] min-h-screen p-6">

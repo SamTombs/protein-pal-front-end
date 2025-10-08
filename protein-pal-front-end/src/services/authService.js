@@ -24,7 +24,7 @@ const signIn = async (formData) => {
     const res = await axios.post(`${BASE_URL}/sign-in`, formData);
 
     if (res.data.err) {
-      throw new Error(data.err);
+      throw new Error(res.data.err);
     }
 
     if (res.data.token) {
