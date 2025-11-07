@@ -16,7 +16,7 @@ It took me years of crash dieting and working in a high calorie deficit to reali
 It is very difficult to find out foods with a high amount of protein. I wanted a simple resource where you can get some inspiration, slam it down onto a shopping list and head to the shops. 
 
 
-View Site https://github.com/SamTombs/protein-pal-front-end
+View Site https://protein-pal.netlify.app/
 
 Trello https://trello.com/b/K4LelqKs/project-3-protein-pal
 
