@@ -1,6 +1,6 @@
 Project 3 - React / Express
 
-<img width="600" alt="LandingMain" src="https://github.com/user-attachments/assets/2fda5d19-b79e-4113-b3ae-2b2cd78bf271" />
+<img width="800" alt="LandingMain" src="https://github.com/user-attachments/assets/2fda5d19-b79e-4113-b3ae-2b2cd78bf271" />
 
 
 # ProteinPal
@@ -56,11 +56,11 @@ Trello https://trello.com/b/K4LelqKs/project-3-protein-pal
   Mongoose
 </p>
 
-## Rough Drafts
+## Wire Frames
 
 <img src="https://github.com/user-attachments/assets/1aec4788-cd9e-421c-9532-1842daa76bab" alt="landing" width="350" /> <img width="350" alt="shopping-page" src="https://github.com/user-attachments/assets/6a574a78-72d0-457a-a39c-02cbfbc4e875" /> <img width="350"  alt="Lists" src="https://github.com/user-attachments/assets/98a23341-02a3-460b-847e-320745a4da0e" />
 
-## Wire Frames
+## Explorer
 
 <img width="200" height="650" alt="React " src="https://github.com/user-attachments/assets/5c0f32ae-651f-4c02-9d85-fe49e179bc57" />
 
